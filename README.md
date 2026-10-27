@@ -140,6 +140,3 @@ See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** for the full step-by-step guide
 - Add alerts when the latest forecast run differs sharply from the previous one.
 
 ---
-
-## Use of AI tools
-This project was built with the help of **Claude Code (Anthropic)**, an AI coding assistant. It was used to explore the Elexon API, scaffold the backend and frontend, write tests, draft the documentation and the video script, and review the UI. All code and the analysis were reviewed and run locally, and the results were checked against the raw Elexon data.
