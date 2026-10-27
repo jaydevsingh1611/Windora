@@ -138,5 +138,3 @@ See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** for the full step-by-step guide
 - Add a bias-corrected forecast and probabilistic (quantile) buy recommendations per hour.
 - Add a scheduled data refresh and persistent storage for rolling, live operation.
 - Add alerts when the latest forecast run differs sharply from the previous one.
-
----

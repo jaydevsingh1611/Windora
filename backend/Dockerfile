@@ -1,3 +1,4 @@
+
 FROM python:3.12-slim
 
 WORKDIR /app
@@ -6,9 +7,17 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install development dependencies for running tests
+COPY requirements-dev.txt .
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
 COPY app ./app
 COPY data ./data
 COPY scripts ./scripts
+
+# Include tests and pytest configuration
+COPY tests ./tests
+COPY pytest.ini ./pytest.ini
 
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=3s CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"
